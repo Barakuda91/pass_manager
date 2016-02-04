@@ -1,1 +1,1 @@
-Password Manager
+Менеджер паролей.

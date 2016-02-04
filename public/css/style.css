@@ -1,0 +1,19 @@
+body {
+  color: #f00;
+  background: #fff8e0;
+}
+.block {
+  background: #fff5d5;
+  border: 1px solid #a68d40;
+  border-radius: 4px;
+  width: 60%;
+}
+#index {
+  color: #000;
+}
+#signUp {
+  color: #000;
+}
+#singIn {
+  color: #000;
+}
