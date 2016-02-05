@@ -29,14 +29,25 @@
 <script type="text/template" id="singin">
     <div class="block">
         <h2>Страница входа</h2>
-        <input type="text" placeholder="логин" class="input">
-        <input type="text" placeholder="пароль" class="input">
+        <div class="buttons">
+            <input type="text" placeholder="логин" class="input">
+            <input type="text" placeholder="пароль" class="input">
+            <br />
+            <div class="button" id="button-singin">ВПЕРЁД</div>            
+        </div>
     </div>
 </script>
 
 <script type="text/template" id="singup">
     <div class="block">
         <h2>Страница регистрации</h2>
+        <div class="buttons">
+            <input type="text" placeholder="логин" class="input" id="input-login"> <span id=""></span>
+            <input type="text" placeholder="пароль" class="input" id="input-pass">  <span id=""></span>
+            <input type="text" placeholder="пароль снова" class="input" id="input-pass2">    <span id=""></span>
+            <br />
+            <div class="button" id="button-singup">ВПЕРЁД</div>
+        </div>
     </div>
 </script>
 
@@ -54,9 +65,7 @@
 
 <script type="text/template" id="footer">
     <div class="buttons">
-        <div class="button small" id="button-singin">ВХОД</div>
-        <div class="button small" id="button-singup">РЕГИСТРАЦИЯ</div>
-        <div class="button small" id="button-index">НАЗАД</div>
+        <div class="button small" id="button-index"><-></div>
     </div>
 </script>
 
