@@ -1,12 +1,15 @@
 define(['backbone'],
     function( backbone )
     {
-        var App = Backbone.Viev.extend({
+        return backbone.Model.extend({
             initialize: function()
             {
-                console.log('Ghbdtn? vbh!!!');
+                 console.log('initialize');
+            },
+            getPasswords: function()
+            {
+                console.log('getPasswords');
             }
         });
-        return App;
     }
 );

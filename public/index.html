@@ -8,13 +8,59 @@
         <!-- endbower -->
     </head>
     <body>
-        <div class="block" id="index">
-
-
-
-
-
+        <div id="content">
         </div>
+        <div id="comment">
+        </div>
+
+
+
+<script type="text/template" id="index">
+    <div class="block">
+        <div class="buttons">
+            <div class="button" id="button-singin">ВХОД</div>
+            <div class="button" id="button-singup">РЕГИСТРАЦИЯ</div>
+            <br/>
+            <div class="button" id="button-readme">ОПИСАНИЕ</div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="singin">
+    <div class="block">
+        <h2>Страница входа</h2>
+        <input type="text" placeholder="логин" class="input">
+        <input type="text" placeholder="пароль" class="input">
+    </div>
+</script>
+
+<script type="text/template" id="singup">
+    <div class="block">
+        <h2>Страница регистрации</h2>
+    </div>
+</script>
+
+<script type="text/template" id="manager">
+    <div class="block">
+        <h2>Страница менеджера паролей</h2>
+    </div>
+</script>
+
+<script type="text/template" id="readme">
+    <div class="block">
+
+    </div>
+</script>
+
+<script type="text/template" id="footer">
+    <div class="buttons">
+        <div class="button small" id="button-singin">ВХОД</div>
+        <div class="button small" id="button-singup">РЕГИСТРАЦИЯ</div>
+        <div class="button small" id="button-index">НАЗАД</div>
+    </div>
+</script>
+
+
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>

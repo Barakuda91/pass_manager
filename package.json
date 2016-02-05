@@ -2,10 +2,14 @@
   "name": "Pass_manager",
   "version": "0.0.1",
   "devDependencies": {
+    "connect": "^3.4.1",
     "gulp": "^3.9.0",
     "gulp-connect": "^2.3.1",
     "gulp-stylus": "^2.3.0",
     "gulp-ws": "0.0.3",
-    "wiredep": "^3.0.0"
+    "requirejs": "^2.1.22",
+    "socket.io": "^1.4.5",
+    "wiredep": "^3.0.0",
+    "ws": "^1.0.1"
   }
 }

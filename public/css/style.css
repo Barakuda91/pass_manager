@@ -1,19 +1,41 @@
 body {
-  color: #f00;
+  color: #a68d40;
   background: #fff8e0;
+  pisition: relative;
 }
 .block {
   background: #fff5d5;
+  text-align: center;
   border: 1px solid #a68d40;
   border-radius: 4px;
   width: 60%;
+  margin: 10% auto auto auto;
+  pisition: relative;
 }
-#index {
-  color: #000;
+.button {
+  background: #fff1c6;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 20%;
+  margin: 4px;
+  padding: 4px;
 }
-#signUp {
-  color: #000;
+.button:hover {
+  background: #bfb89f;
+  color: #f00;
+  cursor: pointer;
 }
-#singIn {
-  color: #000;
+.small {
+  font-size: xx-small;
+  display: inline-block;
+}
+.buttons {
+  width: 30%;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+.input {
+  border-radius: 4px;
+  display: block;
 }
