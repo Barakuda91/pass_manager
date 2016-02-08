@@ -3,11 +3,14 @@ define(['backbone'],
     {
         return backbone.Model.extend({
             defaults: {
-                markName: 'first',
-                attachment: '',
+                attachment: 'default',
                 login: 'somelogin',
-                pass: 'worker1234443',
-                date: '0000000000'
+                pass: 'worker1234443'
+            },
+            validate: function(attr)
+            {
+                if(attr.login.size < 5)
+                    return 'FATAL ERR';
             }
         });
     }

@@ -44,7 +44,10 @@ gulp.task('bower', function()
 
 // следит за изменением html и css файлов, и запускает таски для релоада
 gulp.task('watch', function () {
-    gulp.watch(['./public/*.html','./public/css/*.css'], ['html']);
+    gulp.watch([
+        './public/*.html',
+        './public/css/*.css',
+        './public/js/*.js'], ['html']);
     gulp.watch(['./public/css/style.styl'], ['css']);
     gulp.watch(['./bower.json'], ['bower']);
 });

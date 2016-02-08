@@ -1,26 +1,23 @@
 define([
-    './views/indexView',
-    './views/singinView',
-    './views/singupView',
-    './views/managerView',
-    './models/elementModel',
     'jquery',
-    'backbone'], function(
-    IndexV,
-    SinginV,
-    SingupV,
-    ManagerV,
-    Model,
+    'backbone',
+    './views/applicationView',
+    './models/elementModel',
+    './models/appModel',
+    './collections/passCollection'], function(
     $,
-    Backbone){
+    Backbone,
+    IndexV,
+    ElModel,
+    AppModel,
+    PassCollection){
 
-	var Application = (function() {
-
-		var appView;
-		var appController;
-
-		var appModel;
-
+	var Application = (function()
+    {
+		var appView; // представление приложения
+		var appModel; // модель всего приложения
+        var elModel; // модель единицы пароля
+        var passCollection; // коллекция паролей
 		var self = null;
 
 		var module = function() {
@@ -31,36 +28,34 @@ define([
 		{
 			constructor: module,
 
-			init: function() {
-
-				self.initModel();
-				self.initView();
-				//self.initRouter();
+			init: function()
+            {
+				self.initAppModel();
+				self.initCollections();
+				self.initAppView();
 			},
-
-			initRouter: function() {
-
-				appController = new Controller({ model: appModel});
-
-				Backbone.history.start();
-			},
-
-			initView: function() {
-
-				indexV = new IndexV({
+            initAppModel: function()
+            {
+                appModel = new AppModel();
+            },
+			initAppView: function()
+            {
+                indexV = new IndexV({
                     model: appModel,
-                    el: $("#content")});
+                    el: $("#content-body"),
+                    collection: passCollection,
+                    ElModel1: new ElModel()
+                });
 
-				appModel.trigger("change");
+				appModel.trigger("render");
 			},
+            initCollections: function()
+            {
+                passCollection = new PassCollection();
+                passCollection.add([new ElModel(),new ElModel()]);
 
-			initModel: function() {
-
-				appModel = new Model();
-			},
-
+            }
 		};
-
 		return module;
 	})();
 

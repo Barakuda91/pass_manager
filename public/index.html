@@ -9,6 +9,8 @@
     </head>
     <body>
         <div id="content">
+            <div id="message-body"></div>
+            <div id="content-body"></div>
         </div>
         <div id="comment">
         </div>
@@ -30,10 +32,10 @@
     <div class="block">
         <h2>Страница входа</h2>
         <div class="buttons">
-            <input type="text" placeholder="логин" class="input">
-            <input type="text" placeholder="пароль" class="input">
+            <input type="text" placeholder="логин" class="input" id="input-login">
+            <input type="password" placeholder="пароль" class="input" id="input-pass">
             <br />
-            <div class="button" id="button-singin">ВПЕРЁД</div>            
+            <div class="button" id="button-singinGo">ВПЕРЁД</div>
         </div>
     </div>
 </script>
@@ -42,11 +44,10 @@
     <div class="block">
         <h2>Страница регистрации</h2>
         <div class="buttons">
-            <input type="text" placeholder="логин" class="input" id="input-login"> <span id=""></span>
-            <input type="text" placeholder="пароль" class="input" id="input-pass">  <span id=""></span>
-            <input type="text" placeholder="пароль снова" class="input" id="input-pass2">    <span id=""></span>
-            <br />
-            <div class="button" id="button-singup">ВПЕРЁД</div>
+            <input type="text" placeholder="логин" class="input" id="input-login">
+            <input type="password" placeholder="пароль" class="input" id="input-pass">
+            <input type="password" placeholder="пароль снова" class="input" id="input-pass2">
+            <div class="button" id="button-singupGo">ВПЕРЁД</div>
         </div>
     </div>
 </script>
@@ -54,6 +55,17 @@
 <script type="text/template" id="manager">
     <div class="block">
         <h2>Страница менеджера паролей</h2>
+        <div class="button" id="button-add-pass">+</div>
+        <table border="1">
+            <tr>
+                <td>название ресурса</td>
+                <td>логин</td>
+                <td>пароль</td>
+                <td>действие</td>
+            </tr>
+            <tbody id="pass-body"></tbody>
+        </table>
+
     </div>
 </script>
 
@@ -67,6 +79,22 @@
     <div class="buttons">
         <div class="button small" id="button-index"><-></div>
     </div>
+</script>
+
+<script type="text/template" id="error">
+    <div class="error">
+        <%= error %>
+    </div>
+</script>
+
+
+<script type="text/template" id="pass-line">
+    <tr class="password">
+        <td contenteditable="true" class="password-span"><%= attachment %> </td>
+        <td contenteditable="true" class="password-span"><%= login %> </td>
+        <td contenteditable="true" class="password-span"><%= pass %> </td>
+        <td class="button-dell-pass">x</td>
+    </tr>
 </script>
 
 
